@@ -145,6 +145,7 @@ const AddTransactionModal: React.FC<AddTransactionModalProps> = ({ isOpen, onClo
               className="hidden" 
               accept="image/*,application/pdf" 
               onChange={handleFileChange}
+              // 這裡已被修正
             />
         </div>
 
@@ -158,3 +159,15 @@ const AddTransactionModal: React.FC<AddTransactionModalProps> = ({ isOpen, onClo
                 <div className="relative flex-1">
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-slate-400">$</span>
                     <input/>
+                        type="number"
+                        inputMode="decimal"
+                        step="0.01"
+                        required
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        className={`w-full pl-10 pr-4 py-3 text-3xl font-bold bg-slate-50 rounded-2xl focus:outline-none focus:ring-2 transition-all placeholder:text-slate-200 ${activeTab === 'income' ? 'text-oz-600 focus:ring-oz-500' : 'text-slate-800 focus:ring-slate-400'}`}
+                        placeholder="0.00"
+                        autoFocus={!isAnalyzing}
+                        // 這裡是閉合符號
+                    />
+                </div>
