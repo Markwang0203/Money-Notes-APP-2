@@ -139,7 +139,7 @@ const AddTransactionModal: React.FC<AddTransactionModalProps> = ({ isOpen, onClo
                  {isAnalyzing ? '分析中...' : (activeTab === 'income' ? '上傳薪資單' : '拍收據')}
                </span>
             </button>
-            <input 
+            <input/> 
               type="file" 
               ref={fileInputRef} 
               className="hidden" 
@@ -157,4 +157,4 @@ const AddTransactionModal: React.FC<AddTransactionModalProps> = ({ isOpen, onClo
             <div className="flex items-center gap-4">
                 <div className="relative flex-1">
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-slate-400">$</span>
-                    <input
+                    <input/>
