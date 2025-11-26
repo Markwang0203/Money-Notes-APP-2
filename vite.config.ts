@@ -6,8 +6,7 @@ import path from 'path'
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
-    return {
-    root: '.', // 
+    root: '.' // 
     plugins: [react()],
     // ...
   }
